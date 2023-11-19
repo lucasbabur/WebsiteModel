@@ -22,4 +22,10 @@ const components = {
   },*/
 };
 
-export const CustomTheme = extendTheme({ colors, fonts, components });
+export const initialColorModeConfiguration: "dark" | "light" = "dark";
+
+export const CustomTheme = extendTheme({
+  colors,
+  fonts,
+  components,
+});

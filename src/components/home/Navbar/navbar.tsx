@@ -11,12 +11,12 @@ import {
   VStack,
   IconButton,
   CloseButton,
+  Button,
+  useColorMode,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 
 export default function NavBar(props: { children: any }) {
-  // displayName
-
   const bg = useColorModeValue("white", "gray.800");
   const mobileNav = useDisclosure();
 
