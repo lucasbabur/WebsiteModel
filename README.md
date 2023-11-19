@@ -1,40 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SampleApp Codebase
+
+## Introduction
+
+SampleApp is a comprehensive web application built using a modern tech stack including NextJS, ChakraUI, Yup, Preact Signals, and Firebase. It's designed to offer the fastest development experience possible.
+
+## Features
+
+- **Home Page Components** : A variety of components such as Hero, Navbar, Footer, Schedule, Sponsors, and WhyComponent, each with unique functionalities and styles.
+- **Form Handling** : Utilizes Formik for managing form states, Yup for validation schemas, and custom field components to handle different input types.
+- **Firebase Integration** : Authentication and Firestore database interactions are handled with Firebase services.
+- **Theming** : Customizable theme configurations with ChakraUI for a consistent and modifiable design system.
+- **Sidebar Navigation** : Dynamic sidebar navigation in the application, leveraging React context for state management.
+
+## Directory Structure
+
+- `src/`: Source files for the application.
+  - `backEnd/`: Backend-related configurations and schema definitions.
+    - `middlewares/`: Useful general use middlewares
+    - `schemas/`: Schemas to validate data
+  - `components/`: Reusable components for the application.
+  - `config/`: Configuration files for the application. Differently from most applications, I also include here the instances of the general abstraction components in the components folder.
+  - `firebase/`: Firebase configuration and context setup.
+  - `pages/`: Next.js pages for routing.
+  - `theme/`: Custom theme configurations for ChakraUI.
+
+## Key Components
+
+1. **Form Components**: Custom input fields, radio buttons, and selectors with integrated validation -- designed to be extremely fast to develop and change.
+2. **Sidebar**: A dynamic sidebar with context-based state management.
+3. **Firebase Context**: Context API for managing Firebase state across the app.
+4. **API Routing**: Configured Next.js API routes with various middlewares.
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Installation** : Clone the repository and install dependencies with `pnpm install`.
+2. **Environment Setup** : Set up Firebase, placing the environment variables
+3. **Running the App** : Start the development server with `pnpm run dev`.
