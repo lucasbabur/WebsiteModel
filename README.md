@@ -2,7 +2,9 @@
 
 ## Introduction
 
-SampleApp is a comprehensive web application built using a modern tech stack including NextJS, ChakraUI, Yup, Preact Signals, and Firebase. It's designed to offer the fastest development experience possible.
+SampleApp is a web application boilerplate built using NextJS, ChakraUI, Yup, Formik, Preact Signals, and Firebase. It's designed to offer the fastest development experience possible.
+
+Live Demo: [SampleApp (sampleapp-xi.vercel.app)](https://sampleapp-xi.vercel.app/)
 
 ## Features
 
@@ -11,6 +13,7 @@ SampleApp is a comprehensive web application built using a modern tech stack inc
 - **Firebase Integration** : Authentication and Firestore database interactions are handled with Firebase services.
 - **Theming** : Customizable theme configurations with ChakraUI for a consistent and modifiable design system.
 - **Sidebar Navigation** : Dynamic sidebar navigation in the application, leveraging React context for state management.
+- **Optimized Landing Page:** The initial landing page has almost perfect lighthouse scores in performance, SEO, accessibility and best practices.
 
 ## Directory Structure
 
@@ -36,3 +39,9 @@ SampleApp is a comprehensive web application built using a modern tech stack inc
 1. **Installation** : Clone the repository and install dependencies with `pnpm install`.
 2. **Environment Setup** : Set up Firebase, placing the environment variables
 3. **Running the App** : Start the development server with `pnpm run dev`.
+
+## To-do
+
+1. **Add support to light theme**
+2. **Improve the design of the landing page**
+3. **Add Analytics**
