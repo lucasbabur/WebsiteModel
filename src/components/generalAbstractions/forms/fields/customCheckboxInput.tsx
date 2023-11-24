@@ -3,8 +3,7 @@ import {
   FormLabel,
   FormErrorMessage,
   Stack,
-  Radio,
-  RadioGroup,
+  CheckboxGroup,
   Checkbox,
 } from "@chakra-ui/react";
 
@@ -37,7 +36,7 @@ export function CustomCheckboxInput<T>(props: CustomCheckboxInputProps<T>) {
             mt={mt}
           >
             <FormLabel>{label}</FormLabel>
-            <RadioGroup>
+            <CheckboxGroup {...field}>
               <Stack direction="column">
                 {options.map((option, index) => {
                   return (
@@ -51,7 +50,7 @@ export function CustomCheckboxInput<T>(props: CustomCheckboxInputProps<T>) {
                   );
                 })}
               </Stack>
-            </RadioGroup>
+            </CheckboxGroup>
             <FormErrorMessage>{form.errors[name]}</FormErrorMessage>
           </FormControl>
         );
