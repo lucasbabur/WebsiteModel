@@ -5,4 +5,5 @@ export * from "./fields/customDateInputField";
 export * from "./fields/customRadioAppearInput";
 export * from "./fields/customRadioButton";
 export * from "./fields/customCheckboxInput";
+export * from "./fields/customTimeKeeper";
 export * from "./FormWrapper";

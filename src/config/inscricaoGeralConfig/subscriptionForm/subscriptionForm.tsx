@@ -13,6 +13,7 @@ import {
   CustomRadioAppearInput,
   CustomCheckboxInput,
   CustomRadioButton,
+  CustomTimeKeeper,
   FormWrapper,
 } from "../../../components/generalAbstractions/forms";
 
@@ -134,7 +135,14 @@ export function SubscriptionForm(props: SubscriptionFormProps) {
           label="Do you agree with our privacy policy?"
           mt="4"
         />
-
+        <CustomTimeKeeper<FormFieldsInterface>
+          name="time"
+          label="Time"
+          mt="4"
+          reactTimeKeeperProps={{
+            hour24Mode: true,
+          }}
+        />
         <Text mt="3" fontSize={14}>
           You can find our privacy policy by clicking{" "}
           <Link href={privacyPolicy} target="_blank" textColor={"blue.500"}>
