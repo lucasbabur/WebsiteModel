@@ -36,21 +36,31 @@ export function CustomCheckboxInput<T>(props: CustomCheckboxInputProps<T>) {
             mt={mt}
           >
             <FormLabel>{label}</FormLabel>
-            <CheckboxGroup {...field}>
-              <Stack direction="column">
+
+            <Stack direction="column">
+              <CheckboxGroup value={field.value}>
                 {options.map((option, index) => {
+                  var checked = false;
+
+                  for (let i = 0; i < field?.value?.length; i++) {
+                    if (field.value[i] == option.value) {
+                      checked = true;
+                    }
+                  }
+
                   return (
                     <Checkbox
-                      key={index + option.value.toString()}
+                      key={index}
                       {...field}
                       value={option.value}
+                      isChecked={checked}
                     >
                       {option.label}
                     </Checkbox>
                   );
                 })}
-              </Stack>
-            </CheckboxGroup>
+              </CheckboxGroup>
+            </Stack>
             <FormErrorMessage>{form.errors[name]}</FormErrorMessage>
           </FormControl>
         );
