@@ -14,7 +14,7 @@ export interface Option {
   shallAppearComponents?: boolean;
 }
 
-interface CustomRadioFieldInputProps<T> {
+interface CustomRadioAppearInputProps<T> {
   label: string;
   name: keyof T;
   options: Option[];
@@ -22,7 +22,9 @@ interface CustomRadioFieldInputProps<T> {
   children?: React.ReactNode;
 }
 
-export function CustomRadioFieldInput<T>(props: CustomRadioFieldInputProps<T>) {
+export function CustomRadioAppearInput<T>(
+  props: CustomRadioAppearInputProps<T>,
+) {
   // Use Formik's useField to get form state
   const { name, children, options, label, mt } = props;
 
