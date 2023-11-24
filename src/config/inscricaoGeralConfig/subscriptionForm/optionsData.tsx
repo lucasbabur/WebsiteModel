@@ -1,4 +1,8 @@
-import { Option } from "../../../components/generalAbstractions/forms/fields/customRadioAppearInput";
+import {
+  CustomCheckboxOptionsProps,
+  CustomRadioButtonOptionsObject,
+  Option,
+} from "../../../components/generalAbstractions/forms";
 
 export const sampleOptions = [
   { value: "Sample 4", label: "Sample 4" },
@@ -12,9 +16,16 @@ export const radioOptions: Option[] = [
   { option: "No", shallAppearComponents: false },
 ];
 
-export const termsAgreed: Option[] = [
-  { option: "Agree", shallAppearComponents: true },
-  { option: "Don't Agree", shallAppearComponents: false },
+export const termsAgreed: CustomRadioButtonOptionsObject[] = [
+  { value: "Agree", label: "Agree" },
+  { value: "Don't Agree", label: "Don't Agree" },
+];
+
+export const checkboxOptionsSample: CustomCheckboxOptionsProps[] = [
+  { value: "Option 1", label: "Option 1" },
+  { value: "Option 2", label: "Option 2" },
+  { value: "Option 3", label: "Option 3" },
+  { value: "Option 4", label: "Option 4" },
 ];
 
 export const privacyPolicy = "/";

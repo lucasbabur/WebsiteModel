@@ -48,10 +48,11 @@ export const validationSchema: Yup.Schema<FormFieldsInterface> = Yup.object({
     then: () => Yup.string().required(mandatoryInformation),
     otherwise: () => Yup.string().notRequired(),
   }),
+  checkboxOptions: Yup.array().of(Yup.string().required(mandatoryInformation)),
   privacyPolicy: Yup.string()
     .required("You must agree to our privacy policy to participate.")
     .test(
-      "ConcordaComOsTermos?",
+      "doYouAgreeWithTerms?",
       "You must agree to our privacy policy to participate.",
       (value) => {
         return value === "Agree";

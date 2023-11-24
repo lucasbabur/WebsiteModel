@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { ReadData, WriteData } from "./backEndInscricaoForm";
+import { ReadData, WriteData } from "./backEndSubscriptionForm";
 import { useFirebase } from "../../../firebase/firebaseContext";
 import { FormFieldsInterface } from "./interface";
 
@@ -8,10 +8,11 @@ import { useToast, Text, Link, UseToastOptions } from "@chakra-ui/react";
 
 import {
   CustomInputField,
-  CustomInputFieldProps,
   CustomDateInputField,
   CustomSelectField,
-  CustomRadioFieldInput,
+  CustomRadioAppearInput,
+  CustomCheckboxInput,
+  CustomRadioButton,
   FormWrapper,
 } from "../../../components/generalAbstractions/forms";
 
@@ -22,6 +23,7 @@ import {
   sampleOptions,
   radioOptions,
   termsAgreed,
+  checkboxOptionsSample,
   privacyPolicy,
 } from "./optionsData";
 
@@ -105,7 +107,8 @@ export function SubscriptionForm(props: SubscriptionFormProps) {
           label="Birth Date"
           mt="4"
         />
-        <CustomRadioFieldInput<FormFieldsInterface>
+
+        <CustomRadioAppearInput<FormFieldsInterface>
           options={radioOptions}
           name="yesOrNo"
           label="Yes or no?"
@@ -117,13 +120,21 @@ export function SubscriptionForm(props: SubscriptionFormProps) {
             options={sampleOptions}
             mt="4"
           />
-        </CustomRadioFieldInput>
-        <CustomRadioFieldInput<FormFieldsInterface>
+        </CustomRadioAppearInput>
+
+        <CustomCheckboxInput<FormFieldsInterface>
+          options={checkboxOptionsSample}
+          name="checkboxOptions"
+          label="Checkbox options"
+          mt="4"
+        />
+        <CustomRadioButton<FormFieldsInterface>
           options={termsAgreed}
           name="privacyPolicy"
           label="Do you agree with our privacy policy?"
           mt="4"
         />
+
         <Text mt="3" fontSize={14}>
           You can find our privacy policy by clicking{" "}
           <Link href={privacyPolicy} target="_blank" textColor={"blue.500"}>

@@ -4,6 +4,7 @@ export const FormFields = {
   yesOrNo: "",
   selectSample: "",
   privacyPolicy: "",
+  checkboxOptions: [] as string[],
 };
 
 // Inference from FormFields. Basically, all the Required types need to be placed in the RequiredFields type.
